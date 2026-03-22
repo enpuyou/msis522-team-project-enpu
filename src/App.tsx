@@ -3,7 +3,6 @@ import {
   Brain,
   CheckCircle2,
   Code2,
-  FileText,
   ImageIcon,
   Layers3,
   Lightbulb,
@@ -51,10 +50,6 @@ export default function App() {
       <div className="page-container">
         <section className="hero surface hero-surface">
           <div className="hero-copy">
-            <div className="template-pill">
-              <Sparkles size={14} />
-              Plug-and-Play Project Page
-            </div>
             <h1>{projectData.title}</h1>
             <p className="owner-line">{projectData.ownerLine}</p>
             <p className="hero-subtitle">{projectData.subtitle}</p>
@@ -88,11 +83,11 @@ export default function App() {
         <section className="surface instructions-surface">
           <div className="instruction-heading">
             <div className="icon-box cyan-box">
-              <FileText size={22} />
+              <Sparkles size={22} />
             </div>
             <div>
-              <p className="instruction-title">How students should use this page</p>
-              <p className="instruction-subtitle">Fill in the content, keep the overall layout and pacing.</p>
+              <p className="instruction-title">Observability · Guardrails · Evaluation</p>
+              <p className="instruction-subtitle">norma.ai gives every agent a structured trace, a policy contract, and a quality score — without modifying agent code.</p>
             </div>
           </div>
 
@@ -124,7 +119,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Problem</p>
-                <h3>What problem are you trying to solve?</h3>
+                <h3>Agents in production have no control plane</h3>
               </div>
             </div>
             <p className="body-copy">{projectData.problemStatement}</p>
@@ -151,7 +146,7 @@ export default function App() {
               </div>
               <div>
                 <p className="dark-eyebrow">Solution</p>
-                <h3>What are you building?</h3>
+                <h3>A governance layer that wraps any agent</h3>
               </div>
             </div>
             <p className="dark-copy">{projectData.solutionSummary}</p>
@@ -168,8 +163,8 @@ export default function App() {
         <section>
           <SectionHeader
             eyebrow="Team"
-            title="Show who built it and what each person owned"
-            description="This section should read like a real team build, not just a list of names. Make ownership specific."
+            title="Who Built It"
+            description="Meet the people behind the project and what each person owned."
           />
           <div className="card-grid two-up">
             {projectData.members.map((member) => (
@@ -188,8 +183,8 @@ export default function App() {
         <section>
           <SectionHeader
             eyebrow="Gallery"
-            title="Add screenshots, diagrams, evidence, and visual proof"
-            description="Students can place screenshots, diagrams, PDFs, or photos inside public/project-assets and reference them from the data file."
+            title="Screenshots & Evidence"
+            description="Visual walkthrough of the product — dashboards, run detail views, compliance reports, and agent graph."
           />
           <div className="card-grid two-up">
             {projectData.gallery.map((item) =>
@@ -223,7 +218,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Stack</p>
-                <h3>Make the stack easy to scan</h3>
+                <h3>Technology Stack</h3>
               </div>
             </div>
             <div className="stack-list">
@@ -253,7 +248,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Methods</p>
-                <h3>Call out the techniques quickly</h3>
+                <h3>AI & Engineering Methods</h3>
               </div>
             </div>
             <div className="method-grid">
@@ -264,7 +259,6 @@ export default function App() {
                   </div>
                   <div>
                     <p className="method-title">{method}</p>
-                    <p className="method-note">Explain how this method improved speed, quality, or reliability.</p>
                   </div>
                 </div>
               ))}
@@ -275,8 +269,8 @@ export default function App() {
         <section>
           <SectionHeader
             eyebrow="Product"
-            title="Break the experience into feature cards"
-            description="Each card should explain what the user does, what the system does, and what concrete value the interaction creates."
+            title="Key Features"
+            description="The four core capabilities that make norma.ai a complete governance layer for production AI agents."
           />
           <div className="card-grid two-up">
             {projectData.features.map((feature) => (
@@ -307,7 +301,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Architecture</p>
-                <h3>Explain how the system works</h3>
+                <h3>How the System Works</h3>
               </div>
             </div>
             <div className="architecture-list">
@@ -330,7 +324,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Code Highlights</p>
-                <h3>Paste short code samples if they help</h3>
+                <h3>Code Highlights</h3>
               </div>
             </div>
             <div className="code-list">
@@ -360,7 +354,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Roadmap</p>
-                <h3>Show momentum and next steps</h3>
+                <h3>Roadmap</h3>
               </div>
             </div>
             <div className="roadmap-list">
@@ -387,7 +381,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Risks</p>
-                <h3>Be honest about constraints</h3>
+                <h3>Risks & Mitigations</h3>
               </div>
             </div>
             <div className="risk-list">
@@ -403,11 +397,12 @@ export default function App() {
 
         <section className="closing-card">
           <div>
-            <p className="dark-eyebrow">Closing Section</p>
-            <h2>End with a clear business case</h2>
+            <p className="dark-eyebrow">Business Case</p>
+            <h2>Why norma.ai matters in production</h2>
             <p>
-              The strongest project pages do not stop at “here is our interface.” They explain why the idea matters,
-              how the system is built, what evidence exists today, and what should happen next.
+              Every team deploying LLM agents in production faces the same gap: powerful capabilities with no control
+              plane. norma.ai closes that gap, giving engineers enforcement and observability, and giving managers
+              compliance evidence and cost accountability, without changing a single line of agent code.
             </p>
           </div>
 
@@ -417,28 +412,28 @@ export default function App() {
                 <Users size={18} />
               </div>
               <h3>Who benefits?</h3>
-              <p>State the user, customer, or stakeholder group in plain language.</p>
+              <p>AI engineers deploying LLM agents and the engineering managers and compliance leads responsible for AI oversight and risk.</p>
             </div>
             <div className="closing-mini-card">
               <div className="icon-box dark-icon-box">
                 <Target size={18} />
               </div>
               <h3>What changes?</h3>
-              <p>Explain the operational, financial, or human outcome the project improves.</p>
+              <p>Unauthorized tool use, PII leakage, and uncontrolled cost overruns are caught automatically, and every decision is auditable.</p>
             </div>
             <div className="closing-mini-card">
               <div className="icon-box dark-icon-box">
                 <Layers3 size={18} />
               </div>
               <h3>Why this build?</h3>
-              <p>Call out the architecture or approach choices that make the solution credible.</p>
+              <p>Deterministic enforcement (no LLM, microsecond latency) combined with LLM-as-judge quality scoring gives teams both speed and depth.</p>
             </div>
             <div className="closing-mini-card">
               <div className="icon-box dark-icon-box">
                 <Rocket size={18} />
               </div>
               <h3>What is next?</h3>
-              <p>Name the next test, launch step, or milestone that turns the prototype into a stronger product.</p>
+              <p>Webhook alerting, role-based contract approvals, and SaaS multi-tenant deployment to move from prototype to production-ready platform.</p>
             </div>
           </div>
         </section>
